@@ -38,18 +38,17 @@ public class BinarySearchTree {
             current.right = remove(current.right, data);
         }
         else {
-            //case 1: no children
             if(current.left == null && current.right == null){
                 return null;
             };
-            //case 2:  1 child
+
             if(current.left == null){
                 return current.right;
             }
             if(current.right == null){
                 return current.left;
             }
-            //case3: two children
+
             int smallestValue = findSmallestValue(current.right);
             current.data = smallestValue;
             current.right = remove(current.right, smallestValue);
@@ -72,5 +71,18 @@ public class BinarySearchTree {
     }
     public void inOrder(){
         inOrder(root);
+    }
+
+    private Node Search(Node current, int data){
+        if (current == null) {
+        }
+
+        if (current == current.left) {
+
+        }
+    }
+
+    public Node Search(int data){
+
     }
 }
